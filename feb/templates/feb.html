@@ -18,4 +18,80 @@
     <p> 8. Program Diploma III Keuangan Perbankan</p>
     </h2>
 
+    <h2>Daftar Nama Dosen FEB</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Fakultas</th>
+            <th>Prodi</th>
+            <th>Alamat</th>
+        </tr>
+        {% for dosen in dataDosen %}
+        <tr>
+            <td>{{ dosen.nip }}</td>
+            <td>{{ dosen.nama }}</td>
+            <td>{{ dosen.tanggal_lahir }}</td>
+            <td>{{ dosen.foto }}</td>
+            <td>{{ dosen.email }}</td>
+            <td>{{ dosen.fakultas }}</td>
+            <td>{{ dosen.prodi }}</td>
+            <td>{{ dosen.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Daftar Nama Staf FEB</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Unit</th>
+            <th>Alamat</th>
+        </tr>
+        {% for staf in dataStaf %}
+        <tr>
+            <td>{{ staf.nip }}</td>
+            <td>{{ staf.nama }}</td>
+            <td>{{ staf.tanggal_lahir }}</td>
+            <td>{{ staf.foto }}</td>
+            <td>{{ staf.email }}</td>
+            <td>{{ staf.unit }}</td>
+            <td>{{ staf.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Daftar Nama Mahasiswa FEB</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Fakultas</th>
+            <th>Prodi</th>
+            <th>Alamat</th>
+        </tr>
+        {% for mahasiswa in dataMahasiswa %}
+        <tr>
+            <td>{{ mahasiswa.nim }}</td>
+            <td>{{ mahasiswa.nama }}</td>
+            <td>{{ mahasiswa.tanggal_lahir }}</td>
+            <td>{{ mahasiswa.foto }}</td>
+            <td>{{ mahasiswa.email }}</td>
+            <td>{{ mahasiswa.fakultas }}</td>
+            <td>{{ mahasiswa.prodi }}</td>
+            <td>{{ mahasiswa.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
 {% endblock %}

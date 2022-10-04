@@ -4,6 +4,102 @@
 
 {% block content %}
 
-    <h1 class="text-center">Pascasarjana</h1>
+    <h1 class="text-center">Fakultas Teknik</h1>
+
+    <p>Pascasarjana terdiri dari 16 Program Studi, diantaranya:</p>
+    <h2>
+    <p> 1. Program Studi Doktor Pendidikan </p>
+    <p> 2. Program Studi Doktor Ilmu Akuntansi</p>
+    <p> 3. Program Studi Doktor Ilmu Pertanian</p>
+    <p> 4. Program Studi Magister Pendidikan Bahasa Indonesia</p>
+    <p> 5. Program Studi Magister Teknologi Pendidikan</p>
+    <p> 6. Program Studi Magister Hukum</p>
+    <p> 7. Program Studi Magister Administrasi Publik</p>
+    <p> 8. Program Studi Magister Akuntansi</p>
+    <p> 9. Program Studi Magister Manajemen</p>
+    <p> 10. Program Studi Magister Pendidikan Bahasa Inggris</p>
+    <p> 11. Program Studi Magister Pendidikan Matematika</p>
+    <p> 12. Program Studi Magister Ilmu Pertanian</p>
+    <p> 13. Program Studi Magister Ilmu Komunikasi</p>
+    <p> 14. Program Studi Magister Teknik Kimia</p>
+    <p> 15. Program Studi Magister Pendidikan Dasar</p>
+    <p> 16. Program Studi Magister Ekonomi</p>
+    </h2>
+
+    <h2>Daftar Nama Dosen Pascasarjana</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Fakultas</th>
+            <th>Prodi</th>
+            <th>Alamat</th>
+        </tr>
+        {% for dosen in dataDosen %}
+        <tr>
+            <td>{{ dosen.nip }}</td>
+            <td>{{ dosen.nama }}</td>
+            <td>{{ dosen.tanggal_lahir }}</td>
+            <td>{{ dosen.foto }}</td>
+            <td>{{ dosen.email }}</td>
+            <td>{{ dosen.fakultas }}</td>
+            <td>{{ dosen.prodi }}</td>
+            <td>{{ dosen.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Daftar Nama Staf Pascasarjana</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Unit</th>
+            <th>Alamat</th>
+        </tr>
+        {% for staf in dataStaf %}
+        <tr>
+            <td>{{ staf.nip }}</td>
+            <td>{{ staf.nama }}</td>
+            <td>{{ staf.tanggal_lahir }}</td>
+            <td>{{ staf.foto }}</td>
+            <td>{{ staf.email }}</td>
+            <td>{{ staf.unit }}</td>
+            <td>{{ staf.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Daftar Nama Mahasiswa Pascasarjana</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Fakultas</th>
+            <th>Prodi</th>
+            <th>Alamat</th>
+        </tr>
+        {% for mahasiswa in dataMahasiswa %}
+        <tr>
+            <td>{{ mahasiswa.nim }}</td>
+            <td>{{ mahasiswa.nama }}</td>
+            <td>{{ mahasiswa.tanggal_lahir }}</td>
+            <td>{{ mahasiswa.foto }}</td>
+            <td>{{ mahasiswa.email }}</td>
+            <td>{{ mahasiswa.fakultas }}</td>
+            <td>{{ mahasiswa.prodi }}</td>
+            <td>{{ mahasiswa.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}
