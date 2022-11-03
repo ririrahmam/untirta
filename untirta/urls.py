@@ -25,6 +25,7 @@ from fkip.views import Fkip
 from ft.views import Ft
 from pascasarjana.views import Pascasarjana
 from profil.views import Profil
+from faperta.views import hapus_dosen, hapus_mahasiswa, hapus_staf, tambah_dosen, tambah_mahasiswa, tambah_staf, ubah_dosen, ubah_mahasiswa, ubah_staf
 from . import views
 
 urlpatterns = [
@@ -39,4 +40,13 @@ urlpatterns = [
     path('pascasarjana', Pascasarjana, name="pascasarjana"),
     path('profil', Profil, name="profil"),
     path('', views.index),
+    path('tambah-dosen/', tambah_dosen, name='tambah_dosen'),
+    path('dosen/ubah/<int:id_dosen>', ubah_dosen, name='ubah_dosen'),
+    path('dosen/hapus/<int:id_dosen>', hapus_dosen, name='hapus_dosen'),
+    path('tambah-staf/', tambah_staf, name='tambah_staf'),
+    path('staf/ubah/<int:id_staf>', ubah_staf, name='ubah_staf'),
+    path('staf/hapus/<int:id_staf>', hapus_staf, name='hapus_staf'),
+    path('tambah-mahasiswa/', tambah_mahasiswa, name='tambah_mahasiswa'),
+    path('mahasiswa/ubah/<int:id_mahasiswa>', ubah_mahasiswa, name='ubah_mahasiswa'),
+    path('mahasiswa/hapus/<int:id_mahasiswa>', hapus_mahasiswa, name='hapus_mahasiswa'),
 ]
